@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searched Item</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="h-auto">
+    <header id="header" class="fixed top-0 left-0 right-0 bg-white z-50">
+        <!-- Header content will be dynamically inserted here -->
+    </header>
+
+    <div id="modals">
+        <!-- Modals will be dynamically inserted here -->
+    </div>
+
+    <div class="mt-[80px] w-full h-[50px] border-b-[1px] border-b-[#e6e6e6] flex items-center justify-start px-3 font-semibold md:px-7">
+        <div class="w-full max-w-[800px] flex justify-between items-center gap-[80px] md:justify-start md:max-w-[100%]">
+            <div class="hidden md:block">
+                Articles
+            </div>
+            <div id="resultsInfo" class="text-gray-400 text-[12px] text-left">
+                <!-- Results info will be dynamically inserted here -->
+            </div>
+            <div class="flex sm:hidden">
+                <select id="yearFilter" class="outline-none">
+                    <option value="">YEAR</option>
+                    <option value="2024">Any Time</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <section class="flex w-full h-auto px-4 pt-6 gap-[50px] items-start">
+        <div class="hidden border-b-[1px] border-b-[#e6e6e6] h-auto pb-2 md:block">
+            <select id="filterBy" class="bg-[#e6e6e6] py-1 px-2 rounded-lg">
+                <option value="">Filter by</option>
+                <option value="Date">Date</option>
+            </select>
+            <div id="dateFilter" class="text-left pl-1 pt-2 flex flex-col gap-1 hidden">
+                <!-- Date filter options will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div id="searchResults" class="flex flex-col gap-5 w-full justify-start items-start over">
+            <!-- Search results will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <script src="../JS/searchedItem.js">
+     
+    </script>
+</body>
+</html>
+

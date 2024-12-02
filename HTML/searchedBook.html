@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searched Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-auto-scroll/embla-carousel-auto-scroll.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .embla {
+            overflow: hidden;
+        }
+        .embla__container {
+            display: flex;
+        }
+        .embla__slide {
+            flex: 0 0 100%;
+            min-width: 0;
+        }
+    </style>
+</head>
+<body class="w-full h-auto">
+    <header id="header" class="fixed top-0 left-0 right-0 bg-white z-50">
+        <!-- Header content will be dynamically inserted here -->
+    </header>
+
+    <div class="w-full h-full">
+        <div class="w-full max-w-[800px] font-semibold px-8 mb-1 border-b-[1px] border-b-[#e6e6e6] py-3 mt-[80px] flex justify-between items-center gap-[80px] lg:justify-start md:max-w-[100%]">
+            <div class="hidden md:block">
+                Books
+            </div>
+            <div id="searchInfo" class="text-gray-400 text-[12px] text-left">
+                <!-- Search info will be dynamically inserted here -->
+            </div>
+            <div class="flex lg:hidden bg-transparent">
+                <select id="mobileSortSelect" class="outline-none">
+                    <option value="">Sort by</option>
+                    <option value="">None</option>
+                    <option value="ascending">Most Popular</option>
+                    <option value="descending">Least Popular</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="searchResults" class="flex px-5 flex-col lg:flex-row">
+            <div class="pt-4 hidden lg:flex items-start ml-auto">
+                <select id="desktopSortSelect" class="outline-none bg-transparent font-bold">
+                    <option value="">Sort by</option>
+                    <option value="">None</option>
+                    <option value="ascending">Most Popular</option>
+                    <option value="descending">Least Popular</option>
+                </select>
+            </div>
+            <div class="flex flex-col h-full w-full classer">
+                <div id="forYouSection" class="hidden">
+                    <div class="w-full max-w-[1200px] mx-auto text-xl font-bold px-4 py-2">
+                        For You
+                    </div>
+                    <div class="embla z-0 relative less p-5" id="forYouCarousel">
+                        <div class="embla__container">
+                            <!-- For You carousel items will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-[1200px] mx-auto text-xl font-bold px-4 py-2">
+                    Browse
+                </div>
+                <div id="browseResults" class="w-full h-full max-w-[1200px] text-black p-2 grid grid-cols-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5">
+                    <!-- Browse results will be dynamically inserted here -->
+                </div>
+
+                <div class="flex gap-2 w-full max-w-[1200px] mx-auto py-4 px-5">
+                    <div id="scrollToTop" class="h-[30px] text-gray-700 text-3xl flex items-center justify-center hover:text-gray-950 cursor-pointer">
+                        <i class="fas fa-arrow-circle-up"></i>
+                    </div>
+                    <div id="prevPage" class="bg-gray-700 text-[15px] px-3 py-1 rounded-md text-white cursor-pointer mb-5 hover:bg-gray-950 hidden">
+                        prev page
+                    </div>
+                    <div id="nextPage" class="bg-gray-700 text-[15px] px-3 py-1 rounded-md text-white cursor-pointer mb-5 hover:bg-gray-950 hidden">
+                        next page
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/searchedBook.js">
+        
+    </script>
+</body>
+</html>
+

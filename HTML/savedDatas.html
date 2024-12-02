@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify.min.js"></script>
+</head>
+<body class="w-full h-full p-3">
+    <header>
+        <!-- Header content would go here -->
+    </header>
+
+    <div class="mt-[75px] bg-[#f3f2f2] border-[1px] w-full max-w-[1200px] mx-auto rounded-lg overflow-auto h-full min-h-[88vh] max-h-[88vh]">
+        <div class="h-auto py-3 flex w-full items-center justify-between px-5">
+            <div class="font-bold text-3xl">My Collection</div>
+            <div>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="h-[35px] flex gap-5 px-5 items-center border-b-[1px] border-b-[#c9c7c7]">
+            <div id="articleTab" class="cursor-pointer pb-[11px] border-b-[3px] font-semibold border-black">Article</div>
+            <div id="booksTab" class="cursor-pointer pb-[11px]">Books</div>
+            <div id="computationTab" class="cursor-pointer pb-[11px]">Computation</div>
+        </div>
+
+        <div id="articleContent" class="w-full overflow-auto"></div>
+        <div id="booksContent" class="w-full overflow-auto hidden"></div>
+        <div id="computationContent" class="w-full overflow-auto hidden"></div>
+    </div>
+
+    <script src="../JS/savedDatas.js"> </script>
+</body>
+</html>
+

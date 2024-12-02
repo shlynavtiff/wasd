@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-black': '#292929',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="h-screen w-full p-2 flex flex-col justify-between">
+        <!-- Header placeholder -->
+        <header>
+            <!-- Header content would go here -->
+        </header>
+
+        <div class="w-full min-h-[400px] h-[80vh] flex items-center flex-col justify-center gap-5 md:h-[50vh]">
+            <div>
+                <h1 class="text-custom-black text-[2rem] font-bold text-center lg:text-[2.5rem]">
+                    BOOK-FINDER
+                </h1>
+                <h3 class="text-custom-black text-md font-medium text-center">
+                    Your gateway to 74,000+ educational books and resources
+                </h3>
+            </div>
+            <form class="flex items-center justify-center w-full flex-col" action="submit">
+                <div class="relative w-full max-w-[700px]">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <input
+                        class="w-full h-[50px] border-2 px-2 outline-none rounded-3xl bg-[#f9f9f9] pl-8 relative z-0"
+                        type="text" 
+                        placeholder="Search something..."
+                    />
+                </div>
+                <div class="text-center mt-3">
+                    Recommended: <span class="font-bold">The Reign of Greed</span>
+                </div>
+            </form>
+        </div>
+
+        <footer class="h-auto p-3 flex flex-col justify-between gap-3 xl:h-[70vh]">
+            <div class="h-full w-full gap-2 grid grid-cols-2 md:flex md:justify-between">
+                <div class="w-full h-full bg-custom-black rounded-lg p-5 text-white flex flex-col justify-between items-start">
+                    <div>
+                        <div class="font-bold text-2xl mb-3">Extensive Collection</div>
+                        <p class="text-[12px] text-gray-400 lg:text-[17px] md:text-[13px]">
+                            Access a comprehensive library of 74,000
+                            academic books spanning various disciplines and subjects.
+                            Whether you are looking for texts in science, technology,
+                            humanities, social sciences, or any other field, BookFinder
+                            offers an unparalleled repository of knowledge to support your research and learning needs.
+                        </p>
+                    </div>
+                    <button class="mt-5 bg-white text-custom-black py-2 px-3 rounded-lg font-semibold">Learn more</button>
+                </div>
+                <div class="w-full h-full bg-custom-black rounded-lg p-5 text-white flex flex-col justify-between items-start">
+                    <div>
+                        <div class="font-bold text-2xl mb-3">Advanced Search</div>
+                        <p class="text-[12px] text-gray-400 lg:text-[17px] md:text-[13px]">
+                            Utilize powerful and intuitive search tools to quickly locate
+                            specific books, authors, or topics within our extensive database.
+                            Our advanced filtering options allow you to refine your search
+                            by publication date, subject, author, and more, ensuring you find
+                            the most relevant resources with ease.
+                        </p>
+                    </div>
+                    <button class="mt-5 bg-white text-custom-black py-2 px-3 rounded-lg font-semibold">Learn more</button>
+                </div>
+                <div id="legnthen" class="col-span-2 w-[100%] h-full bg-custom-black rounded-lg p-5 text-white flex flex-col justify-between items-start">
+                    <div>
+                        <div class="font-bold text-2xl mb-3">Seamless Access</div>
+                        <p class="text-[12px] text-gray-400 lg:text-[17px] md:text-[13px]">
+                            Enjoy instant access to a wealth of information, including full texts,
+                            abstracts, and detailed bibliographic records. BookFinder ensures that
+                            you can efficiently retrieve and utilize academic resources, whether for
+                            in-depth study, reference, or citation, supporting your academic and
+                            research endeavors comprehensively.
+                        </p>
+                    </div>
+                    <button class="mt-3 bg-white text-custom-black py-2 px-3 rounded-lg font-semibold">Learn more</button>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+                <div class="text-custom-black">Support the Developer</div>
+                <div class="flex gap-3">
+                    <a href="https://github.com/shlynavtiff" target="_blank" class="text-[#292929]"><i
+                        class="fa fa-github" style="font-size:20px"></i></a>
+                <a href="https://www.facebook.com/shlynavtiff/" target="_blank" class="text-[#292929]"><i
+                        class="fa fa-facebook-square" style="font-size:20px"></i></a>
+                <a href="https://www.instagram.com/shlynav.tiff/" target="_blank" class="text-[#292929]"><i
+                        class="fa fa-instagram" style="font-size:20px"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript functionality would need to be implemented here
+        // This would include:
+        // - Form submission handling (findBook function)
+        // - Handling input changes (setStringVal function)
+        // - Conditional rendering for the search icon
+        // - Button click handlers for "Learn more" buttons
+    </script>
+</body>
+</html>
+
